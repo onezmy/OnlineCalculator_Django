@@ -1,0 +1,41 @@
+table{
+    text-align:center;
+}
+button {
+    font-size:xx-large;
+    background-color:rgb(235, 183, 215);
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    border-color: black;
+    
+}
+button.operator{
+    background-color:#f078aa;
+}
+button:hover{
+    background-color: #ddc6a3;
+}
+div.True{
+    background-color:#eee9a9;
+    display: table-cell;
+    color: black;
+    border: solid black 2px;
+    font-size: 45px;
+    text-align: right;
+    vertical-align: middle;
+    width: 250px;
+    height: 80px;
+}
+
+div.False{
+    background-color:#a9ec8f;
+    display: table-cell;
+    color: black;
+    border: solid black 2px;
+    font-size: 45px;
+    text-align: right;
+    vertical-align: middle;
+    width: 250px;
+    height: 80px;
+}

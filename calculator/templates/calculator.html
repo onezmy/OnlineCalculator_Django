@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>calculator</title>
+        <link rel="stylesheet" href="static/calculator/calculator.css">
+    </head>
+   <body>
+        <div id = "output" class="{{entering}}">{{output}}</div>
+        <form method="POST" action="/">
+            <input type="hidden" name="stack" value="{{stack}}">
+            <input type="hidden" name="entering" value="{{entering}}">
+            <input type="hidden" name="pre_stack" value="{{stack}}">
+            <input type="hidden" name="pre_entering" value="{{entering}}">
+            <table>
+                <tr>
+                    <td><button name="button" id="key-7" value="7">7</button></td> 
+                    <td><button name="button" id="key-8" value="8">8</button></td> 
+                    <td><button name="button" id="key-9" value="9">9</button></td> 
+                    <td><button class="operator" name="button" id="key-plus" value="plus">&plus;</button></td>  
+                 </tr>
+                <tr>
+                    <td><button name="button" id="key-4" value="4">4</button></td> 
+                    <td><button name="button" id="key-5" value="5">5</button></td> 
+                    <td><button name="button" id="key-6" value="6">6</button></td> 
+                    <td><button class="operator" name="button" id="key-minus" value="minus">&minus;</button></td>  
+                 </tr>
+                <tr>
+                    <td><button name="button" id="key-1" value="1">1</button></td> 
+                    <td><button name="button" id="key-2" value="2">2</button></td> 
+                    <td><button name="button" id="key-3" value="3">3</button></td> 
+                    <td><button class="operator" name="button" id="key-times" value="times">&times;</button></td>    
+                 </tr>
+                <tr>
+                     <td></td>
+                    <td><button name="button" id="key-0" value="0">0</button></td>
+                    <td><button class="operator" name="button" id="key-push" value="push">&uarr;</button></td>
+                    <td><button class="operator" name="button" id="key-divide" value="divide">&divide;</button></td>
+                 </tr>
+            </table>
+            <div type="hidden" id = "stack" class = "enter">{{stack}}</div>
+            <div type="hidden" id = "entering" class = "out">{{entering}}</div>
+            {% csrf_token %}
+        </form>
+            
+   </body>
+</html>
